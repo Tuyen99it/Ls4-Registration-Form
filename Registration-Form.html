@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Registration Form</title>
+        <link href="Registration-Form.css" rel="stylesheet">
     </head>
     <body>
         <h1>Registration Form</h1>
@@ -20,7 +21,7 @@
                     <input id="email" type="email" name="email" required>
                 </label>
                 <label id="password">Create a new password:
-                    <input id="password" type="number" name="password" pattern="[a-z0-5]{8,}" required>
+                    <input id="password" type="password" name="password" pattern="[a-z0-5]{8,}" required>
                 </label>
             </fieldset>
             <fieldset>
@@ -41,8 +42,8 @@
                 <lable for="age">Input your age (years):
                     <input id="age" type="number" name="age" min="13" max="120" required>
                 </lable>
-                <label for="referrer">
-                    <section id="referrer" name="referrer">
+                <label for="referrer">How did you hear about us?
+                    <select id="referrer" name="referrer">
                         <option value="">
                             Select one
                         </option>
@@ -58,18 +59,18 @@
                         <option value="4">
                             Other
                         </option>
-                    </section>
+                    </select>
                 </label>
                 <label for="bio">Provide a bio:
                     <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Coding on the beach..."></textarea>
                 </label>
             </fieldset>
             <label for="terms">
-                <input id="terms" type="checkbox" name="terms" required>
+                <input id="terms" type="checkbox" name="terms" class="inline" required>
                 I accept the <a href="https://terms.org" target="_blank">terms and conditions</a>
             </label>
             <label for="submit">
-                <input id="submit" name="submit" type="submit" value="submit">
+                <input id="submit" name="submit" type="submit" value="Submit">
             </label>
         </form>
     </body>
